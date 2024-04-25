@@ -51,6 +51,10 @@ fn main() {
             config.handle_keypress(c)
         }
 
+        if config.pause {
+            continue;
+        }
+
         // Update and redraw the board.
         matrix.arrange(&config);
         matrix.draw(&window, &config);
